@@ -31,20 +31,20 @@
  }
 
   </style>
-<title>Howdy, the chatbot</title>
+<title>Jarvic, the chatbot</title>
 
 </head>
 
 
 <body>
-    <h1>Meet Howdy, the intelligent chatbot!</h1>
+    <h1>Meet Jarvic, the intelligent chatbot!</h1>
 
     {% if next_question %}
-    <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span><span>{{ question }}</span><br>
-    <span STYLE="background-color:#ff8787; font-size: 20px" >Howdy:</span><span>{{ answer }}</span><br>    
-    <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span><span>{{ next_question }}</span><br>
-    <span STYLE="background-color:#ff8787; font-size: 20px" >Howdy:</span><span>{{ answer }}</span><br>    
-    <form action="{{ test }}" method="POST">
+    <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span><span> {{ question }}</span><br>
+    <span STYLE="background-color:#ff8787; font-size: 20px" >Jarvic:</span><span> {{ prev_answer }}</span><br>    
+    <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span><span> {{ next_question }}</span><br>
+    <span STYLE="background-color:#ff8787; font-size: 20px" >Jarvic:</span><span> {{ answer }}</span><br>    
+    <form action="{{ convnumb }}" method="POST">
     <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span>
         <input type="text" placeholder="Type a message..." name="next_question2" autocomplete="off" autofocus="autofocus" maxlength="100" class="resizedTextbox"><br>
         <input type="submit" name="my-form" value="Send">
@@ -52,16 +52,16 @@
 
 
     {% elif question %}
-    <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span><span>{{ question }}</span><br>
-    <span STYLE="background-color:#ff8787; font-size: 20px" >Howdy:</span><span>{{ answer }}</span><br>    
-    <form action="{{ test }}" method="POST">
+    <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span><span> {{ question }}</span><br>
+    <span STYLE="background-color:#ff8787; font-size: 20px" >Jarvic:</span><span> {{ answer }}</span><br>    
+    <form action="{{ convnumb }}" method="POST">
     <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span>
         <input type="text" placeholder="Type a message..." name="next_question" autocomplete="off" autofocus="autofocus" maxlength="100" class="resizedTextbox"><br>
         <input type="submit" name="my-form" value="Send">
     </form>
 
     {% else %}
-    <form action="{{ test }}" method="POST">
+    <form action="{{ convnumb }}" method="POST">
     <span STYLE="background-color:#00eaff; font-size: 20px" >You:</span>
         <input type="text" placeholder="Type a message..." name="question" autocomplete="off" autofocus="autofocus" maxlength="100" class="resizedTextbox"><br>
         <input type="submit" name="my-form" value="Send">
