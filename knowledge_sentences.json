@@ -1,0 +1,62 @@
+{
+    "hm?": [
+        0,
+        2,
+        10,
+        [
+            "hm"
+        ]
+    ],
+    "What's up?": [
+        0,
+        2,
+        10,
+        [
+            "whats",
+            "up"
+        ]
+    ],
+    "LOL": [
+        0,
+        1,
+        10,
+        [
+            "lol"
+        ]
+    ],
+    "whatsup": [
+        0,
+        2,
+        10,
+        [
+            "whatsup"
+        ]
+    ],
+    "Nothing much, dude!": [
+        0,
+        1,
+        10,
+        [
+            "nothing",
+            "much",
+            "dude"
+        ]
+    ],
+    "How come you are mixing up what's up with whatsup?": [
+        0,
+        1,
+        10,
+        [
+            "how",
+            "come",
+            "you",
+            "are",
+            "mixing",
+            "up",
+            "whats",
+            "up",
+            "with",
+            "whatsup"
+        ]
+    ]
+}
