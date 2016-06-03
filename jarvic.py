@@ -50,6 +50,7 @@ def mlwords(answer, next_question):
 #===============================
 #THE SAVE NEXT QUESTION FUNCTION
 #===============================
+#Jarvic saves all the new sentences it sees.
 def save_next_question(next_question):
     with open(sentences) as data_file:
 	knowledge_new = json.load(data_file)
@@ -77,23 +78,22 @@ def save_next_question(next_question):
 #=========================
 #THE CONVERSATION FUNCTION
 #=========================
+#Jarvic tries to answer questions.
 def answering(question):
     worddict = ""
     knowledge = {}
     knowledge_new = ""
 
-#Open the known sentences and the known words.
+#It opens the known sentences and the known words.
     with open(words) as data_file:
 	worddict = json.load(data_file)
-#	print '4'
     data_file.close()
 
     with open(sentences) as data_file:
 	knowledge = json.load(data_file)
-#	print '5'
     data_file.close()
 
-#Check if there is answer in the lists. If yes, gives back the answer.
+#Checks the known words and the known sentences. If there is answer, gives back the answer.
     answer = ""
     wereanswer = False
     weresamenext = False
@@ -101,19 +101,13 @@ def answering(question):
     for idx,lword in enumerate(qs):
 	qs[idx]=rmpu2(qs[idx])
 	if qs[idx] in worddict:
-#	    print qs[idx]
 	    d = Counter(worddict[qs[idx]])
-#	    print d
-#	    print d.most_common(3)
 	    for k, v in d.most_common(3):
-#		print k.encode('utf-8')
-#		print v
 		for xxx in knowledge:
 		    if k in knowledge[xxx][3]:
 			knowledge[xxx][0] += v
 			print knowledge[xxx]
     for checker in knowledge:
-#	print knowledge[checker][0]
 	if knowledge[checker][0] > 0:
 	    wereanswer = True
 	    break
@@ -121,26 +115,8 @@ def answering(question):
     if wereanswer is True:
 	answer = max(knowledge, key=knowledge.get)
 	return answer.encode('utf-8')
-#	next_question = raw_input("You: ")
-#	mlwords(answer, next_question)
-#	return next_question
 
-#If howdy doesn't know the answer, he gives back the same question as an answer.
+#If Jarvic doesn't have any answer, it gives back the same question as an answer.
     if wereanswer is False:
 	    answer = question
 	    return answer.encode('utf-8')
-#	    next_question = raw_input("You: ")
-#	    mlwords(answer, next_question)
-#	    return next_question
-
-#==========================
-#INTRO & CALLING FUNTCTIONS
-#==========================
-#print "Hi, my name is Jarvic! I don't know anything about the world. Please teach me!"
-
-#Starts with user input.
-#question = ""
-#question = raw_input("You: ")
-
-#calling the conversation function
-#print conversation(question)

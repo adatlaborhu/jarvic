@@ -4,6 +4,8 @@ from flask import render_template
 from flask import redirect
 import random
 from jarvic import answering
+from jarvic import mlwords
+from jarvic import save_next_question
 
 app = Flask(__name__)
 
@@ -27,15 +29,19 @@ def my_form_post(convnumb):
     global answer
 
     if next_question[convnumb]:
+	prev_answer = answer
 	question[convnumb] = next_question[convnumb]
 	next_question[convnumb] = request.form['next_question2']
-	prev_answer = answer
+	mlwords(prev_answer,next_question[convnumb])
+	save_next_question(next_question[convnumb])
 	answer = answering(next_question[convnumb])
 	return render_template("jarvic.html", question=question[convnumb], next_question=next_question[convnumb], answer=answer, prev_answer=prev_answer, convnumb = convnumb)
 
     elif question[convnumb]:
-	next_question[convnumb] = request.form['next_question']
 	prev_answer = answer
+	next_question[convnumb] = request.form['next_question']
+	mlwords(prev_answer,next_question[convnumb])
+	save_next_question(next_question[convnumb])
 	answer = answering(next_question[convnumb])
 	return render_template("jarvic.html", question=question[convnumb], next_question=next_question[convnumb], answer=answer, prev_answer=prev_answer, convnumb = convnumb)
 

@@ -1,92 +1,44 @@
 {
+    "and": {
+        "time": 1,
+        "to": 1,
+        "learn": 1,
+        "my": 1,
+        "its": 1,
+        "friend": 1
+    },
     "whats": {
-        "whats": 2,
-        "with": 1,
-        "up": 2,
-        "how": 1,
-        "are": 1,
-        "hm": 1,
-        "mixing": 1,
-        "you": 1,
-        "come": 1,
-        "whatsup": 2
-    },
-    "come": {
-        "hm": 1,
-        "whats": 1,
-        "up": 1,
-        "whatsup": 1
-    },
-    "dude": {
-        "whats": 1,
-        "up": 1
-    },
-    "up": {
-        "whats": 2,
-        "with": 1,
-        "up": 2,
-        "how": 1,
-        "are": 1,
-        "hm": 1,
-        "mixing": 1,
-        "you": 1,
-        "come": 1,
-        "whatsup": 2
-    },
-    "lol": {
-        "hm": 1
-    },
-    "how": {
-        "hm": 1,
-        "whats": 1,
-        "up": 1,
-        "whatsup": 1
+        "not": 1,
+        "much": 1,
+        "dude": 1
     },
     "much": {
+        "and": 1,
+        "you": 1
+    },
+    "dude": {
+        "and": 1,
+        "you": 1
+    },
+    "up": {
+        "not": 1,
+        "much": 1,
+        "dude": 1
+    },
+    "hi": {
         "whats": 1,
         "up": 1
     },
-    "are": {
-        "hm": 1,
-        "whats": 1,
-        "up": 1,
-        "whatsup": 1
-    },
-    "hm": {
-        "lol": 1
-    },
-    "nothing": {
-        "whats": 1,
-        "up": 1
+    "not": {
+        "and": 1,
+        "you": 1
     },
     "you": {
-        "hm": 1,
-        "whats": 1,
-        "up": 1,
-        "whatsup": 1
-    },
-    "with": {
-        "hm": 1,
-        "whats": 1,
-        "up": 1,
-        "whatsup": 1
-    },
-    "hello": {
-        "whatsup": 1
-    },
-    "mixing": {
-        "hm": 1,
-        "whats": 1,
-        "up": 1,
-        "whatsup": 1
-    },
-    "whatsup": {
-        "whats": 1,
-        "dude": 1,
-        "up": 1,
-        "much": 1,
-        "whatsup": 1,
-        "hm": 1,
-        "nothing": 1
+        "time": 1,
+        "to": 1,
+        "learn": 1,
+        "my": 1,
+        "its": 1,
+        "friend": 1
     }
 }
