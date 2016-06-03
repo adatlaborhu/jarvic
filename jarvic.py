@@ -101,6 +101,7 @@ def answering(question):
     for idx,lword in enumerate(qs):
 	qs[idx]=rmpu2(qs[idx])
 	if qs[idx] in worddict:
+	    print qs[idx]
 	    d = Counter(worddict[qs[idx]])
 	    for k, v in d.most_common(3):
 		for xxx in knowledge:

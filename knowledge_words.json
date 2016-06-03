@@ -1,44 +1,106 @@
 {
     "and": {
-        "time": 1,
+        "and": 1,
+        "good": 1,
+        "hey": 1,
+        "im": 1,
+        "too": 1,
+        "fine": 1
+    },
+    "great": {
+        "great": 1,
+        "what": 1,
         "to": 1,
-        "learn": 1,
-        "my": 1,
-        "its": 1,
-        "friend": 1
-    },
-    "whats": {
-        "not": 1,
-        "much": 1,
-        "dude": 1
-    },
-    "much": {
-        "and": 1,
+        "hear": 1,
+        "nothing": 1,
         "you": 1
     },
-    "dude": {
-        "and": 1,
+    "good": {
+        "to": 1,
+        "great": 2,
+        "hear": 1
+    },
+    "to": {
+        "great": 1,
+        "what": 1,
+        "to": 1,
+        "hear": 1,
+        "nothing": 1,
         "you": 1
     },
-    "up": {
-        "not": 1,
-        "much": 1,
-        "dude": 1
+    "jarvic": {
+        "how": 1,
+        "you": 1,
+        "are": 1
+    },
+    "hey": {
+        "hey": 5
+    },
+    "how": {
+        "and": 1,
+        "im": 2,
+        "you": 1,
+        "fine": 2
     },
     "hi": {
-        "whats": 1,
-        "up": 1
+        "how": 1,
+        "you": 1,
+        "are": 1
     },
-    "not": {
+    "im": {
         "and": 1,
+        "great": 2,
+        "good": 1,
+        "hey": 1,
+        "to": 1,
+        "hear": 1,
+        "too": 1,
+        "im": 1,
+        "fine": 1
+    },
+    "are": {
+        "and": 1,
+        "im": 2,
+        "you": 1,
+        "fine": 2
+    },
+    "what": {
+        "nothing": 1,
+        "you": 1
+    },
+    "hear": {
+        "great": 1,
+        "what": 1,
+        "to": 1,
+        "hear": 1,
+        "nothing": 1,
         "you": 1
     },
     "you": {
-        "time": 1,
+        "and": 2,
+        "good": 1,
+        "hey": 1,
+        "im": 3,
+        "too": 1,
+        "you": 1,
+        "fine": 3
+    },
+    "fine": {
+        "and": 1,
+        "good": 1,
+        "hey": 1,
+        "im": 1,
+        "too": 1,
+        "fine": 1
+    },
+    "hello": {
+        "how": 1,
+        "you": 1,
+        "are": 1
+    },
+    "too": {
         "to": 1,
-        "learn": 1,
-        "my": 1,
-        "its": 1,
-        "friend": 1
+        "great": 2,
+        "hear": 1
     }
 }

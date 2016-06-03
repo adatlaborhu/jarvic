@@ -1,42 +1,96 @@
 {
-    "not much, dude": [
+    "great to hear": [
         0,
         1,
         10,
         [
-            "not",
-            "much",
-            "dude"
-        ]
-    ],
-    "whats up?": [
-        0,
-        1,
-        10,
-        [
-            "whats",
-            "up"
-        ]
-    ],
-    "its time to learn my friend": [
-        0,
-        1,
-        10,
-        [
-            "its",
-            "time",
+            "great",
             "to",
-            "learn",
-            "my",
-            "friend"
+            "hear"
         ]
     ],
-    "and you?": [
+    "im fine. and you?": [
+        0,
+        1,
+        10,
+        [
+            "im",
+            "fine",
+            "and",
+            "you"
+        ]
+    ],
+    "and fine...": [
         0,
         1,
         10,
         [
             "and",
+            "fine"
+        ]
+    ],
+    "im good too": [
+        0,
+        1,
+        10,
+        [
+            "im",
+            "good",
+            "too"
+        ]
+    ],
+    "hey": [
+        0,
+        6,
+        10,
+        [
+            "hey"
+        ]
+    ],
+    "im fine...": [
+        0,
+        1,
+        10,
+        [
+            "im",
+            "fine"
+        ]
+    ],
+    "great!": [
+        0,
+        1,
+        10,
+        [
+            "great"
+        ]
+    ],
+    "how are you?": [
+        0,
+        2,
+        10,
+        [
+            "how",
+            "are",
+            "you"
+        ]
+    ],
+    "great to hear what?": [
+        0,
+        1,
+        10,
+        [
+            "great",
+            "to",
+            "hear",
+            "what"
+        ]
+    ],
+    "nothing, you": [
+        0,
+        1,
+        10,
+        [
+            "nothing",
             "you"
         ]
     ]
