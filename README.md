@@ -1,1 +1,3 @@
 # jarvic
+Jarvic is a learning chatbot. I try to copy-paste into Jarvic the learning curve of a newborn baby. It works with Python + Flask.
+This is an ongoing project right now...
