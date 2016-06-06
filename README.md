@@ -11,16 +11,11 @@ What's done recently:
 (I'll add a more detailed discription on the logic of Jarvic, once it's done.)
 
 My next todo's:
-!.) Log each conversation into separated files.
 
-0.) Find some chatlog material, that I can use to train Jarvic.
-
-1.) Let Jarvic, evaluate his own answers, too. By scoring from 0 to 10. 0 is when the user left the conversation right after Jarvic's answer. 10 is when user stayed for 10 more "lines".
-
-2.) Give the answer based not only on the last user input, but the last 5 user inputs. (Goal: understand if someone teaches "you are" instead of "i am".)
-
-3.) Identify stopwords automatically.
-
-4.) Identify reactions by users (eg. words), that predicts longer conversations.
-
-+1.) Ger prepared for typos.
+- Log each conversation into separated files.
+- Find some chatlog material, that I can use to train Jarvic.
+- Let Jarvic, evaluate his own answers, too. By scoring from 0 to 10. 0 is when the user left the conversation right after Jarvic's answer. 10 is when user stayed for 10 more "lines".
+- Give the answer based not only on the last user input, but the last 5 user inputs. (Goal: understand if someone teaches "you are" instead of "i am".)
+- Identify stopwords automatically.
+- Identify reactions by users (eg. words), that predicts longer conversations.
+- Ger prepared for typos.
