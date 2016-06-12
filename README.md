@@ -9,7 +9,7 @@ What's done recently:
 - when you give Jarvic an input, it uses a basic logic to give back an answer - based on the previous conversations it had.
 - every time you add an input, it learns it. At the next answer Jarvic may use it's new knowledge.
 (I'll add a more detailed discription on the logic of Jarvic, once it's done.)
-- it logs each conversation into separated files. (recoverable and reviewable conversations)
+- it logs each conversation into separated files. (recoverable and reviewable conversations) these go into the convlog/ dir - but mainly for privacy (and other obvious) reasons I won't share it on GitHub
 - fixed character coding issues
 
 My next todo's:
