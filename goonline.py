@@ -3,9 +3,11 @@ from flask import request
 from flask import render_template
 from flask import redirect
 import random
+from time import gmtime, strftime
 from jarvic import answering
 from jarvic import mlwords
 from jarvic import save_next_question
+from unidecode import unidecode
 
 app = Flask(__name__)
 
@@ -23,6 +25,12 @@ prev4_answer = ""
 @app.route('/start/')
 def my_form_name():
     id = "/conv/" + str(random.randrange(1,100000000000000))
+    convtime = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    ip = request.remote_addr
+    ip_log = open("convlog/ip_log.txt", 'a')
+    ip_log.write(convtime + '\t' + id + '\t' + ip + '\n')
+    ip_log.close()
+
     return redirect(id, code=302)
 
 @app.route('/conv/<convnumb>')
@@ -52,10 +60,15 @@ def my_form_post(convnumb):
 	prev3_question[convnumb] = prev2_question[convnumb]
 	prev2_question[convnumb] = prev_question[convnumb]
 	prev_question[convnumb] = question[convnumb]
-	question[convnumb] = request.form['question']
+	question[convnumb] = unidecode(request.form['question'])
 	mlwords(prev_answer,question[convnumb])
 	save_next_question(question[convnumb])
 	answer = answering(question[convnumb])
+
+	convlog = open("convlog/" + convnumb, 'a')
+	convlog.write(question[convnumb] + '\n' + answer + '\n')
+	convlog.close()
+
 	return render_template("jarvic.html",
 				question=question[convnumb], 
 				prev_question=prev_question[convnumb],
@@ -76,10 +89,15 @@ def my_form_post(convnumb):
 	prev3_question[convnumb] = prev2_question[convnumb]
 	prev2_question[convnumb] = prev_question[convnumb]
 	prev_question[convnumb] = question[convnumb]
-	question[convnumb] = request.form['question']
+	question[convnumb] = unidecode(request.form['question'])
 	mlwords(prev_answer,question[convnumb])
 	save_next_question(question[convnumb])
 	answer = answering(question[convnumb])
+
+	convlog = open("convlog/" + convnumb, 'a')
+	convlog.write(question[convnumb] + '\n' + answer + '\n')
+	convlog.close()
+
 	return render_template("jarvic.html",
 				question=question[convnumb], 
 				prev_question=prev_question[convnumb],
@@ -95,10 +113,15 @@ def my_form_post(convnumb):
 	prev_answer = answer
 	prev2_question[convnumb] = prev_question[convnumb]
 	prev_question[convnumb] = question[convnumb]
-	question[convnumb] = request.form['question']
+	question[convnumb] = unidecode(request.form['question'])
 	mlwords(prev_answer,question[convnumb])
 	save_next_question(question[convnumb])
 	answer = answering(question[convnumb])
+
+	convlog = open("convlog/" + convnumb, 'a')
+	convlog.write(question[convnumb] + '\n' + answer + '\n')
+	convlog.close()
+
 	return render_template("jarvic.html",
 				question=question[convnumb],
 				prev_question=prev_question[convnumb],
@@ -111,15 +134,25 @@ def my_form_post(convnumb):
     elif question[convnumb]:
 	prev_answer = answer
 	prev_question[convnumb] = question[convnumb]
-	question[convnumb] = request.form['question']
+	question[convnumb] = unidecode(request.form['question'])
 	mlwords(prev_answer,question[convnumb])
 	save_next_question(question[convnumb])
 	answer = answering(question[convnumb])
+
+	convlog = open("convlog/" + convnumb, 'a')
+	convlog.write(question[convnumb] + '\n' + answer + '\n')
+	convlog.close()
+
 	return render_template("jarvic.html", question=question[convnumb], prev_question=prev_question[convnumb], answer=answer, prev_answer=prev_answer, convnumb = convnumb)
 
     else:
-	question[convnumb] = request.form['question']
+	question[convnumb] = unidecode(request.form['question'])
 	answer = answering(question[convnumb])
+
+	convlog = open("convlog/" + convnumb, 'a')
+	convlog.write(question[convnumb] + '\n' + answer + '\n')
+	convlog.close()
+
 	return render_template("jarvic.html", question=question[convnumb], answer=answer, convnumb = convnumb)
 
 if __name__ == '__main__':
